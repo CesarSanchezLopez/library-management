@@ -1,0 +1,46 @@
+@model IEnumerable<LibraryManagement.Web.Models.LibroViewModel>
+
+<h2>Libros</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<p>
+    @Html.ActionLink("Crear nuevo libro", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Año</th>
+            <th>Genero</th>
+            <th>Páginas</th>
+            <th>AutorId</th>
+            <th>Fecha Publicación</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var libro in Model)
+    {
+        <tr>
+            <td>@libro.Id</td>
+            <td>@libro.Titulo</td>
+            <td>@libro.Anio</td>
+            <td>@libro.Genero</td>
+            <td>@libro.NumeroPaginas</td>
+            <td>@libro.AutorId</td>
+            <td>@(libro.FechaPublicacion.HasValue ? libro.FechaPublicacion.Value.ToString("yyyy-MM-dd") : "-")</td>
+            <td>
+                @Html.ActionLink("Detalles", "Details", new { id = libro.Id }, new { @class = "btn btn-info btn-sm" })
+                @Html.ActionLink("Editar", "Edit", new { id = libro.Id }, new { @class = "btn btn-warning btn-sm" })
+                @Html.ActionLink("Eliminar", "Delete", new { id = libro.Id }, new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

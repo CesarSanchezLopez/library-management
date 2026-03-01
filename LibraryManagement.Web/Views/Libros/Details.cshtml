@@ -1,0 +1,35 @@
+@model LibraryManagement.Web.Models.LibroViewModel
+
+<h2>Detalle Libro</h2>
+
+<div>
+    <h4>Libro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Id</dt>
+        <dd>@Model.Id</dd>
+
+        <dt>Título</dt>
+        <dd>@Model.Titulo</dd>
+
+        <dt>Año</dt>
+        <dd>@Model.Anio</dd>
+
+        <dt>Género</dt>
+        <dd>@Model.Genero</dd>
+
+        <dt>Número de Páginas</dt>
+        <dd>@Model.NumeroPaginas</dd>
+
+        <dt>AutorId</dt>
+        <dd>@Model.AutorId</dd>
+
+        <dt>Fecha de Publicación</dt>
+        <dd>@(Model.FechaPublicacion.HasValue ? Model.FechaPublicacion.Value.ToString("yyyy-MM-dd") : "-")</dd>
+    </dl>
+
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Volver a la lista", "Index")
+    </p>
+</div>

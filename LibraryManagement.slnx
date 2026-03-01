@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LibraryManagement.API/LibraryManagement.API.csproj" Id="5324c711-605f-406f-ab10-bc0c5cf06880" />
+  <Project Path="LibraryManagement.Web/LibraryManagement.Web.csproj" Id="c40950d8-8b61-4a8a-9fcf-d4b12046462e" />
+</Solution>

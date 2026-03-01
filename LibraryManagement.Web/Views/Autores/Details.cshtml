@@ -1,0 +1,29 @@
+@model LibraryManagement.Web.Models.AutorViewModel
+
+<h2>Detalle Autor</h2>
+
+<div>
+    <h4>Autor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Id</dt>
+        <dd>@Model.Id</dd>
+
+        <dt>Nombre Completo</dt>
+        <dd>@Model.NombreCompleto</dd>
+
+        <dt>Fecha de Nacimiento</dt>
+        <dd>@Model.FechaNacimiento.ToString("yyyy-MM-dd")</dd>
+
+        <dt>Ciudad de Procedencia</dt>
+        <dd>@Model.CiudadProcedencia</dd>
+
+        <dt>Correo Electrónico</dt>
+        <dd>@Model.CorreoElectronico</dd>
+    </dl>
+
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Volver a la lista", "Index")
+    </p>
+</div>

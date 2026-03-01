@@ -1,0 +1,42 @@
+@model IEnumerable<LibraryManagement.Web.Models.AutorViewModel>
+
+<h2>Autores</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<p>
+    @Html.ActionLink("Crear nuevo autor", "Create", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Fecha Nacimiento</th>
+            <th>Ciudad</th>
+            <th>Correo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var autor in Model)
+    {
+        <tr>
+            <td>@autor.Id</td>
+            <td>@autor.NombreCompleto</td>
+            <td>@(autor.FechaNacimiento.ToString("yyyy-MM-dd"))</td>
+            <td>@autor.CiudadProcedencia</td>
+            <td>@autor.CorreoElectronico</td>
+            <td>
+                @Html.ActionLink("Detalles", "Details", new { id = autor.Id }, new { @class = "btn btn-info btn-sm" })
+                @Html.ActionLink("Editar", "Edit", new { id = autor.Id }, new { @class = "btn btn-warning btn-sm" })
+                @Html.ActionLink("Eliminar", "Delete", new { id = autor.Id }, new { @class = "btn btn-danger btn-sm" })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
