@@ -10,8 +10,6 @@ Eliminación de libros
 
 Listado de libros
 
-Validación de ISBN único
-
 Manejo básico de errores
 
 Desarrollo Backend con .NET
@@ -41,3 +39,9 @@ Entity Framework / ADO.NET
 La carpeta DataBase contiene los scripts SQL necesarios para crear la base de datos.
 
 DataBase/
+
+En proyecto LibraryManagement.API
+Cambiar la cadena de conexion en web.config
+"ConnectionStrings": {
+  "DefaultConnection": "Server=.;Database=LibraryDB;Trusted_Connection=True;"
+}
