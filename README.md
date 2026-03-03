@@ -14,8 +14,6 @@ Validación de ISBN único
 
 Manejo básico de errores
 
-El proyecto demuestra conocimientos en:
-
 Desarrollo Backend con .NET
 
 Arquitectura en capas
