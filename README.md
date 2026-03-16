@@ -8,6 +8,7 @@ El sistema permite registrar **autores** y **libros**, aplicando reglas de negoc
 
 # 🏗️ Arquitectura del Proyecto
 
+<<<<<<< HEAD
 La solución está dividida en dos proyectos principales:
 
 LibraryManagement
@@ -27,6 +28,11 @@ Solución de Visual Studio
 ---
 
 # ⚙️ Tecnologías utilizadas
+=======
+Manejo básico de errores
+
+Desarrollo Backend con .NET
+>>>>>>> f08857f8cadddf08fc52d7c02dee0d0629e5be32
 
 * C#
 * .NET Framework 4.8
@@ -52,6 +58,7 @@ Database: **LibraryDB**
 
 # 🗄️ Creación de la Base de Datos
 
+<<<<<<< HEAD
 Ejecutar los scripts ubicados en la carpeta:
 
 Database/
@@ -159,3 +166,12 @@ Configuración:
 # ⭐ Repositorio
 
 https://github.com/CesarSanchezLopez/library-management
+=======
+DataBase/
+
+En proyecto LibraryManagement.API
+Cambiar la cadena de conexion en web.config
+"ConnectionStrings": {
+  "DefaultConnection": "Server=.;Database=LibraryDB;Trusted_Connection=True;"
+}
+>>>>>>> f08857f8cadddf08fc52d7c02dee0d0629e5be32
