@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -11,8 +12,9 @@ namespace LibraryManagement.Web.Services
 
         public ApiService()
         {
+            var url = ConfigurationManager.AppSettings["ApiBaseUrl"];
             _client = new HttpClient();
-            _client.BaseAddress = new Uri("https://localhost:44302/api/");
+            _client.BaseAddress = new Uri(url);
             _client.DefaultRequestHeaders.Accept.Clear();
             _client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));

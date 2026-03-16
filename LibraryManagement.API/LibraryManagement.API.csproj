@@ -288,7 +288,6 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AutorController.cs" />
     <Compile Include="Controllers\LibroController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Data\LibraryDbContext.cs" />
     <Compile Include="DTOs\AutorDTO.cs" />
     <Compile Include="DTOs\LibroDTO.cs" />
